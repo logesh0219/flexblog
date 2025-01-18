@@ -1,0 +1,232 @@
+header {
+    background-color: var(--secondary-bg-color);
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    position: relative;
+}
+
+.header-logo {
+    margin: 0;
+    flex-basis: 100%;
+}
+
+.header-logo a {
+    display: flex;
+    align-items: center;
+}
+
+.header-container {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    width: 100%;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: relative;
+    z-index: 10;
+}
+
+.header-blk {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 6rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.header-link-container {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    -webkit-flex-basis: auto;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    min-width: auto;
+}
+
+.header-link-wrapper {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    display: none;
+}
+
+.header-links {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    display: flex;
+}
+
+.header-links li a {
+    color: var(--primary-text-color);
+    font-size: 16px;
+    font-weight: 700;
+    padding: 4px;
+    margin: 0 0.5rem;
+}
+
+.header-links li a:hover {
+    color: #667eea;
+    transition: 0.3s all ease;
+}
+
+.toggle-switch {
+    background-color: var(--toggle-bg-color);
+    padding: 3px;
+    width: 50px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    gap: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.4s all ease;
+    margin-left: 10px;
+}
+
+.toggle-switch.active {
+    background-color: var(--toggle-bg-color);
+    transition: 0.4s all ease;
+}
+
+.toggle-switch::before {
+    position: absolute;
+    content: '';
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    left: 3px;
+    top: 3px;
+    background-color: var(--toggle-text-color);
+    transition: 0.4s all ease;
+}
+
+.toggle-switch.active::before {
+    position: absolute;
+    content: '';
+    transform: translateX(28px);
+    transition: 0.4s all ease;
+}
+
+.toggle-switch.active li .moon {
+    color: var(--toggle-text-color);
+    transition: 0.4s all ease;
+}
+
+.toggle-switch.active li .sun {
+    color: var(--toggle-text-color);
+    transition: 0.4s all ease;
+}
+
+.toggle-switch li {
+    color: var(--toggle-text-color);
+    transition: 0.4s all ease;
+}
+
+.toggle-switch li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    font-size: 16px;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    background-color: var(--search-bar-bg-color);
+    border-radius: 9999px;
+    padding: 0.25rem;
+    display: none;
+}
+
+.responsive-icons {
+    display: flex;
+    gap: 10px;
+}
+
+i {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-text-color);
+}
+
+@media (min-width: 768px) {
+    .header-logo {
+        flex-basis: 33.33%;
+    }
+
+    .header-link-container {
+        flex-basis: 33.333333% !important;
+    }
+
+    .header-link-wrapper {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .header-blk {
+        height: 7rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .header-container {
+        padding: 0 2rem;
+    }
+}
+
+@media screen and (min-width: 319px) and (max-width:768px) {
+    .header-blk {
+        height: 3.5rem;
+        padding-top: 0.1rem;
+        padding-bottom: 0.1rem;
+    }
+
+    .header-container {
+        padding: 1rem !important;
+    }
+
+    .header-links {
+        display: none !important;
+    }
+
+    .toggle-switch {
+        display: none;
+    }
+
+    .header-container {
+        padding: 0 2rem;
+    }
+
+    .icon {
+        display: block;
+    }
+}
